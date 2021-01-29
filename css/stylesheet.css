@@ -1,0 +1,368 @@
+@font-face{
+    font-family: yek;
+    src: url(../font/Yekan.ttf);
+}
+@font-face{
+    font-family: dan;
+    src: url(../font/Dancing.ttf);
+}
+@font-face{
+    font-family: sa;
+    src: url(../font/Sahel.ttf);
+}
+@font-face{
+    font-family: va;
+    src: url(../font/Vazir.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 5px;
+    padding: 5px;
+    background:  #f4f4f4;
+    direction: rtl;
+}
+.header{
+    background: #333;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px;
+}
+.header > h1 {
+    font-family: sa;
+    font-size: 35px;
+    color : #fff;
+}
+.ads{
+    flex: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+img:nth-child(1){
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-left: 1px solid #dbdbdb;
+}
+img:nth-child(3){
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-right: 1px solid #dbdbdb;
+}
+.img-ads{
+    width: 33.3%;
+    float: left;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+hr{
+    border: 1px solid #dbdbdb;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main{
+    flex: 100%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 5px;
+    background: #fff;
+    border: 1px solid #dbdbdb; 
+    border-radius: 5px;
+}
+.img-main{
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border: 1px solid#dbdbdb;
+    border-radius: 10px !important;
+    opacity: 0.7;
+    transition: 1s ease;
+}
+.img-main:hover{
+    opacity: 1;
+    transition: 1s ease;
+}
+h3{
+    color : #000;
+    font-family: sa;
+    font-size: 16px;
+    text-align: center;
+}
+.btn{
+    background: mediumseagreen;
+    width: 20%;
+    padding: 5px;
+    border: 1px solid#fff;
+    outline: none;
+    opacity: 0.7;
+    border-radius: 20px;
+    cursor: pointer; 
+    transition: 1s ease;
+    display: block;
+    margin: auto;
+}
+.btn span {
+    display: inline-block;
+    position: relative;
+    transition: 1s;
+    font-family: sa;
+}
+.btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+.btn:hover span {
+    padding-right: 15px;
+}
+.btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.btn:hover{
+    transition: 1s ease;
+    opacity: 1;
+}
+.insta {
+    cursor: default;
+}
+.tel{
+    color : #ff0000;
+    cursor: pointer;
+    text-decoration: none;
+}
+#footer{
+    background: #333;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px;
+    margin: 5px auto; 
+}
+.page-top{
+    font-weight: bolder;
+    background: mediumseagreen;
+    opacity: 0.7;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 1s ease;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 3%;
+    height: 5%;
+}
+.page-bottom{
+    font-weight: bolder;
+    background: mediumseagreen;
+    opacity: 0.7;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 1s ease;
+    width: 3%;
+    height: 5%;
+    position: fixed;
+    bottom: 10px;
+    left: 60px;
+}
+.page-top:hover,.page-bottom:hover{
+    opacity: 1;
+    transition: 1s ease;
+}
+.btn-page{
+    text-decoration: none;
+    color : #fff;
+    background: mediumseagreen;
+    opacity: 0.7;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 1s ease;
+}
+.btn-page:hover{
+    opacity: 1;
+    transition: 1s ease;
+}
+.btn-page:active{
+    opacity: 1;
+}
+.id-tel{
+    color : red;
+    text-decoration: none;
+}
+@keyframes opac{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 800px){
+    .row,.main{
+        flex-direction: column ;
+        width: 100%;
+    }
+    .img-main{
+        width: 50%;
+        margin: auto;
+        display: block;
+    }
+    .btn{
+        margin: auto;
+        width: 50%;
+    }
+    h3{
+        text-align: center;
+    }
+    .page-top,.page-bottom{
+        width: 10%;
+        height: 5%;
+    }
+    .header > h1{
+        font-size:32px;
+    }
+    .img-main{
+        opacity: 1;
+}
+@media screen and (max-width: 650px){
+    .row,.main{
+        flex-direction: column ;
+        width: 100%;
+    }
+    .img-main{
+        width: 50%;
+        margin: auto;
+        display: block;
+    }
+    .btn{
+        margin: auto;
+        width: 50%;
+    }
+    h3{
+        text-align: center;
+    }
+    .page-top,.page-bottom{
+        width: 10%;
+        height: 5%;
+    }
+    .header > h1{
+        font-size:29px;
+    }
+    .img-main{
+        opacity: 1;
+    }
+
+}
+@media screen and (max-width: 500px){
+    .row,.main{
+        flex-direction: column ;
+        width: 100%;
+    }
+    .img-main{
+        width: 50%;
+        margin: auto;
+        display: block;
+    }
+    .btn{
+        margin: auto;
+        width: 50%;
+    }
+    h3{
+        text-align: center;
+    }
+    .page-top,.page-bottom{
+        width: 10%;
+        height: 5%;
+    }
+    .header > h1{
+        font-size:26px;
+    }
+        .img-main{
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 400px){
+    .row,.main{
+        flex-direction: column ;
+        width: 100%;
+    }
+    .img-main{
+        width: 50%;
+        margin: auto;
+        display: block;
+    }
+    .btn{
+        margin: auto;
+        width: 50%;
+    }
+    h3{
+        text-align: center;
+        font-size: 12px;
+    }
+    .page-top,.page-bottom{
+        width: 10%;
+        height: 5%;
+    }
+    .header > h1{
+        font-size:23px;
+    }
+    .img-main{
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 300px){
+    .row,.main{
+        flex-direction: column ;
+        width: 100%;
+    }
+    .img-main{
+        width: 50%;
+        margin: auto;
+        display: block;
+    }
+    .btn{
+        margin: auto;
+        width: 50%;
+    }
+    h3{
+        text-align: center;
+        font-size: 12.5px;
+    }
+    .page-top,.page-bottom{
+        width: 10%;
+        height: 5%;
+    }
+    .img-main{
+        opacity: 1;
+    }  
+}
+}
